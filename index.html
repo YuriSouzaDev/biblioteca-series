@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>O que eu já assisti?</title>
+      <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+      <header id="header">
+            <h1>Biblioteca de séries<span>🎬</span></h1>
+            <form data-form>
+                  <div>
+                        <label for="serie">Nome da série</label>
+                        <input type="text" name="serie" id="serie" data-name>
+                  </div>
+
+                  <div>
+                        <label for="plataform">Plataforma</label>
+                        <input type="text" name="plataform" id="plataforma" data-plataform>
+                  </div>
+
+                  <div>
+                        <label for="year">Assisti em (ano)</label>
+                        <input type="number" name="year" id="year" data-year>
+                  </div>
+
+                  <div class="form-select">
+                        <label for="status">Já assisti?</label>
+                        <select name="status" id="status" data-status>
+                              <option value="true">Sim</option>
+                              <option value="false">Não</option>
+                        </select>
+                  </div>
+
+                  <button type="submit" class="button" data-submit>Adicionar</input>
+
+            </form>
+      </header>
+
+      <main class="table">
+            <table>
+                  <tbody id="serie-title">
+                        <tr>
+                              <th>Nome</th>
+                              <th>Plataforma</th>
+                              <th>Data</th>
+                              <th>Já assisti?</th>
+                              <th>Deletar</th>
+                        </tr>
+                  </tbody>
+
+                  <tbody id="serie-body" data-table></tbody>
+
+            </table>
+      </main>
+
+
+
+      <script src="./assets/js/script.js"></script>
+</body>
+
+
+</html>
