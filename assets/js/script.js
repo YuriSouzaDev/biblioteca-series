@@ -68,11 +68,7 @@ function addSerie() {
   const yearInput = document.querySelector("[data-year]").value;
   const statusSelect = document.querySelector("[data-status]").value;
 
-  if (
-    nameInput.length !== 0 &&
-    plataformInput.length !== 0 &&
-    yearInput.length !== 0
-  ) {
+  if (nameInput.length !== 0 && plataformInput.length !== 0) {
     const newSerie = new Series(
       nameInput,
       plataformInput,
@@ -123,7 +119,11 @@ function createNewSerie(serie, index) {
 
   // CREATE A YEAR
   const yearName = document.createElement("td");
-  yearName.textContent = serie.year;
+  if (serie.year) {
+    yearName.textContent = serie.year;
+  } else {
+    yearName.textContent = "Sem Data";
+  }
   item.appendChild(yearName);
 
   // CREATE A STATUS CHECKBOX
